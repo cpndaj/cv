@@ -1015,3 +1015,44 @@ button:hover {
         margin-top: 5px;
     }
 }
+
+/* --- ADAPTACIÓN PARA CELULARES Y TABLETS --- */
+@media (max-width: 768px) {
+    
+    /* 1. Liberamos el contenedor principal */
+    body {
+        height: auto !important; /* Permite que la página crezca hacia abajo */
+        overflow-y: auto !important;
+        padding: 10px;
+    }
+
+    /* 2. Convertimos las burbujas fijas en tarjetas apiladas */
+    /* Aquí incluimos todas tus clases: bubble1, bubble2, bubble3, etc. */
+    .bubble1, .bubble2, .bubble3, .bubble4, .bubble5, .bubble6, .bubble7, .bubble8 {
+        position: relative !important; /* Salen de la posición 'clavada' */
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important; /* Ocupan todo el ancho del celular */
+        margin-bottom: 20px !important; /* Espacio entre ellas */
+        height: auto !important; /* Que se estiren según el texto */
+        display: block !important;
+    }
+
+    /* 3. Ajustamos el encabezado/selector de idioma */
+    header {
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    /* 4. Aseguramos que las imágenes y textos no se corten */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    h1 { font-size: 1.5rem !important; }
+    p { font-size: 0.9rem !important; }
+}
