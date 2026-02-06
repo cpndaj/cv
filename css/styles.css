@@ -1018,6 +1018,34 @@ button:hover {
 
 /* --- ADAPTACIÓN PARA CELULARES Y TABLETS --- */
 @media (max-width: 768px) {
+    /* 1. Forzamos al body y al contenedor a no tener desbordamiento lateral */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    * 2. El contenedor que envuelve las burbujas debe ser flexible y centrado */
+    /* Ajusta el nombre '.wrapper' si tu contenedor principal se llama distinto */
+    .wrapper, .container, main {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Esto centra las burbujas horizontalmente */
+        width: 100% !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+
+
+
+
+
+
+
+
+
+    
     
     /* 1. Liberamos el contenedor principal */
     body {
@@ -1037,6 +1065,18 @@ button:hover {
         height: auto !important; /* Que se estiren según el texto */
         display: block !important;
     }
+/* 3. Las burbujas: quitamos cualquier rastro de posición lateral */
+    .bubble1, .bubble2, .bubble3, .bubble4, .bubble5, .bubble6, .bubble7, .bubble8 {
+        position: relative !important;
+        left: 0 !important;      /* Eliminamos el desplazamiento a la derecha */
+        right: 0 !important;
+        margin: 10px auto !important; /* 'auto' en los costados las centra */
+        width: 90% !important;    /* Que no toquen los bordes del cel */
+        max-width: 400px;         /* Para que en tablets no se vean gigantes */
+        box-sizing: border-box !important;
+        transform: none !important; /* Por si alguna tiene un translate */
+    }
+    
 
     /* 3. Ajustamos el encabezado/selector de idioma */
     header {
@@ -1056,23 +1096,5 @@ button:hover {
     h1 { font-size: 1.5rem !important; }
     p { font-size: 0.9rem !important; }
 
-    /* 1. Liberar el scroll en los contenedores principales */
-    html, body {
-        height: auto !important; /* Cambia el alto fijo por automático */
-        overflow-y: auto !important; /* Fuerza la aparición de la barra de desplazamiento */
-        overflow-x: hidden !important; /* Evita que la página se mueva hacia los costados */
-        position: relative !important;
-    }
-
-    /* 2. Si tienes un contenedor tipo 'wrapper' o 'main' con altura fija, libéralo */
-    .wrapper, .container, #main {
-        height: auto !important;
-        min-height: 100vh; /* Que ocupe al menos el alto de la pantalla, pero que pueda crecer */
-        display: block !important; /* Asegura que los elementos se apilen */
-    }
-
-    /* 3. Muy importante: Quitar el overflow hidden si existe */
-    * {
-        touch-action: pan-y !important; /* Mejora la respuesta táctil en móviles */
-    }
+   
 }
