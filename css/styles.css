@@ -1055,4 +1055,24 @@ button:hover {
     
     h1 { font-size: 1.5rem !important; }
     p { font-size: 0.9rem !important; }
+
+    /* 1. Liberar el scroll en los contenedores principales */
+    html, body {
+        height: auto !important; /* Cambia el alto fijo por automático */
+        overflow-y: auto !important; /* Fuerza la aparición de la barra de desplazamiento */
+        overflow-x: hidden !important; /* Evita que la página se mueva hacia los costados */
+        position: relative !important;
+    }
+
+    /* 2. Si tienes un contenedor tipo 'wrapper' o 'main' con altura fija, libéralo */
+    .wrapper, .container, #main {
+        height: auto !important;
+        min-height: 100vh; /* Que ocupe al menos el alto de la pantalla, pero que pueda crecer */
+        display: block !important; /* Asegura que los elementos se apilen */
+    }
+
+    /* 3. Muy importante: Quitar el overflow hidden si existe */
+    * {
+        touch-action: pan-y !important; /* Mejora la respuesta táctil en móviles */
+    }
 }
