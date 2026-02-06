@@ -1023,7 +1023,7 @@ button:hover {
     body {
         height: auto !important; /* Permite que la página crezca hacia abajo */
         overflow-y: auto !important;
-        padding: 10px;
+        padding: 5px;
     }
 
     /* 2. Convertimos las burbujas fijas en tarjetas apiladas */
