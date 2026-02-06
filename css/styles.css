@@ -1082,5 +1082,14 @@ button:hover {
     h1 { font-size: 1.5rem !important; }
     p { font-size: 0.9rem !important; }
 
-   
+    /* Corrección para el error #login de iPhone */
+    /* Ocultamos cualquier elemento que GitHub intente forzar como login */
+    #login, .login-form {
+        display: none !important;
+    }
+    
+    .btnMagnify, .btnMagnifyClose {
+        display: none !important;
+    }
+        
 }
