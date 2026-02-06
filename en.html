@@ -262,6 +262,10 @@
         </div>
     </div>
 </div>
-
+<script>
+  if (window.location.hash === '#login') {
+    history.replaceState(null, null, ' ');
+  }
+</script>
 </body>
 </html>
