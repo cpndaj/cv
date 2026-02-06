@@ -263,9 +263,11 @@
     </div>
 </div>
 <script>
-  if (window.location.hash === '#login') {
-    history.replaceState(null, null, ' ');
-  }
+  window.addEventListener("load", function() {
+    if (window.location.hash === '#login' || window.location.hash === '#') {
+      history.replaceState(null, null, window.location.pathname + window.location.search);
+    }
+  });
 </script>
 </body>
 </html>
