@@ -1015,32 +1015,3 @@ button:hover {
         margin-top: 5px;
     }
 }
-
-/* Estilos para Celulares y Tablets */
-@media (max-width: 768px) {
-  /* Reorganiza el contenedor principal */
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-  }
-
-  /* Quita las posiciones fijas de las burbujas para que fluyan */
-  .bubble1, .bubble2, .bubble3, .bubble4, .bubble5 {
-    position: relative !important;
-    left: 0 !important;
-    top: 0 !important;
-    margin-bottom: 20px;
-    width: 90% !important;
-  }
-
-  /* Ajusta el selector de idioma (header) */
-  header {
-    position: relative !important;
-    left: 0 !important;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-}
