@@ -207,7 +207,6 @@ body.background-es::before {
 }
 
 .word10 {
-    font-size: 4.9em;
     font-size: 5.9em;
 }
 
@@ -627,11 +626,10 @@ opacity: 1;
         margin-left: 0.2rem;
     }
 
-    &:first-child ~ ul>li:nth-child(2),
+    /* &:first-child ~ ul>li:nth-child(2),
         &:first-child >li:nth-child(2) {
-        /* font-size: 13px; */
-    }
-
+        font-size: 13px;
+    } */
 
     & ul ul {
         margin-left: 1.4rem;
@@ -720,6 +718,15 @@ opacity: 1;
         margin-bottom: 0.3rem;
         margin-right: 0.3rem;
         color: #10e209;
+    }
+
+    & li:last-child {
+        color: #000000;
+        margin-top: 2px;
+        &::before {
+            content: '☝';
+            font-style: italic;
+        }
     }
 }
 
@@ -935,7 +942,6 @@ button:hover {
     padding: 4px;
     border-radius: 40px;
     width: 120px;
-    height: ;
     border: 1px solid #7b7b7b;
 }
 
@@ -1073,12 +1079,6 @@ button:hover {
         height: auto !important;
     }
         
-    /* Aseguramos que las imágenes y textos no se corten */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-    
     h1 { font-size: 1.5rem !important; }
     p { font-size: 0.9rem !important; }
 
@@ -1091,5 +1091,26 @@ button:hover {
     .btnMagnify, .btnMagnifyClose {
         display: none !important;
     }
-        
+
+    .word1 {
+        font-size: 6.1em;
+    }
+
+    .word2 {
+        font-size: 7.3em;
+    }
+
+    .word2_after {
+        font-size: .4em;
+        letter-spacing: -1px;
+    }
+
+    .background-en .word10 {
+        font-size: 5.3em;
+    }
+
+    html.background-en::before,
+    body.background-en::before {
+        top: 40%;
+    }
 }
